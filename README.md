@@ -2,13 +2,13 @@
 Retrieval of all-day cloud property based on satellite remote sensing data
 
 ## File description
-| Filename/Dirname                 | Description                                                           |
-| :------------------------------- | :-------------------------------------------------------------------- |
+| Filename/Dirname                 | Description                                               |
+| :------------------------------- | :-------------------------------------------------------- |
 | models                           | The specific parameters of the network structure CldNetV2 |
-| inputs                           | Remote sensing files required for model input                         |
-| outputs                          | Cloud property files predicted by CldNetV2                            |
-| CldNetV2_inference_optimum.py    | Cloud property inference function                                     |
-| CldNetV2_inference_optimum.jsonc | Cloud property inference configuration                                |
+| inputs                           | Remote sensing files required for model input             |
+| outputs                          | Cloud property files predicted by CldNetV2                |
+| CldNetV2_inference_optimum.py    | Cloud property inference function                         |
+| CldNetV2_inference_optimum.jsonc | Cloud property inference configuration                    |
 
 ## Inference 🚀
 - Firstly, install pytorch and xarray in the Anconada environment before running the code.
@@ -19,6 +19,6 @@ python CldNetV2_inference_optimum.py
 ```
 
 ## Other
-If you encounter any problems, feel free to contact me via email nielongfeng@outlook.com .
+If you have any questions, feel free to contact me via email metdai@outlook.com .
 
 🌎🌍🌏
