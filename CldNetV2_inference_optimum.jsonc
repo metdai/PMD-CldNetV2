@@ -1,0 +1,177 @@
+{
+    "description": "optimum | Transfer learning and multi-task; cloud property retrieval [CLTYPE, CLOT, CLTT, CLTH, CLER_23]",
+    "random_seed": 666666,
+    "device": "cuda", // cpu or cuda
+    "is_remove": false,
+    "out_dir": "./outputs/", // Cloud property output folder
+    "load_data": {
+        "name": "load_dataV2",
+        "params": {
+            "RS_dir": "./inputs/", // Remote sensing input folder
+            "is_norm": true,
+            "RS_Threshold_file": "./models/RS_Threshold.jsonc",
+            "vr_file": "./models/value_range.csv",
+            "Cld_Vars": [
+                "CLTYPE",
+                "CLOT",
+                "CLTT",
+                "CLTH",
+                "CLER_23"
+            ],
+            "add_vars": {
+                "W": [
+                    "SAZ",
+                    "SAA",
+                    "SOZ",
+                    "SOA"
+                ]
+            },
+            "Bidx": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+            ]
+        },
+        "mask_bands": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+        ],
+        "mask_delete": true,
+        "mask_ratio": {
+            "W": -1.0,
+            "O": 1.0
+        }
+    },
+    "SOZ": 65.0, // Sun zenith angle threshold
+    "endpoint": true,
+    "kf_idx": 1,
+    "checkpoint1": {
+        "W": {
+            "CLER_23": "./models/CldNetV2_W_CLER.pth"
+        },
+        "O": {
+            "CLER_23": "./models/CldNetV2_O_CLER.pth"
+        }
+    },
+    "checkpoint2": {
+        "W": "./models/CldNetV2_W_ALL.pth",
+        "O": "./models/CldNetV2_O_ALL.pth"
+    },
+    "is_DataParallel": false,
+    "batch_size": 1,
+    "hw": [
+        5,
+        5
+    ],
+    "target_name": [
+        "CLTYPE",
+        "CLOT",
+        "CLTT",
+        "CLTH",
+        "CLER_23"
+    ],
+    "logging": {
+        "mode": "a+",
+        "setLevel": 20,
+        "file_formatter": {
+            "fmt": "%(asctime)s-%(levelname)s: %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S %p"
+        },
+        "terminal_formatter": {
+            "fmt": "%(name)s-%(levelname)s %(asctime)s: %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S %p"
+        }
+    }
+}
