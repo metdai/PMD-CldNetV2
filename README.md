@@ -11,9 +11,22 @@ Retrieval of all-day cloud property based on satellite remote sensing data
 | CldNetV2_inference_optimum.jsonc | Cloud property inference configuration                    |
 
 ## Inference 🚀
-- Firstly, install pytorch and xarray in the Anconada environment before running the code.
+- Firstly, create a Python virtual environment.
+```sh
+conda create -n CldNetV2 python=3.12
+```
 
-- Finally, run the following command in the terminal.
+- Secondly, activate the virtual environment and install related packages.
+```sh
+conda activate CldNetV2
+conda create -n CldNetV2 python=3.12
+conda activate CldNetV2
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install xarray, netCDF4, json5, pandas, einops
+pip install nnn-2.5.7.tar.gz
+```
+
+- Finally, run the following command to predict cloud property in in the terminal.
 ```sh
 python CldNetV2_inference_optimum.py
 ```
