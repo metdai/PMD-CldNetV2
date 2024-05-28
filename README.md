@@ -19,8 +19,6 @@ conda create -n CldNetV2 python=3.12
 - Secondly, activate the virtual environment and install related packages.
 ```sh
 conda activate CldNetV2
-conda create -n CldNetV2 python=3.12
-conda activate CldNetV2
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install xarray, netCDF4, json5, pandas, einops
 pip install nnn-2.5.7.tar.gz
