@@ -10,24 +10,49 @@ Retrieval of all-day cloud property based on satellite remote sensing data
 | CldNetV2_inference_optimum.py    | Cloud property inference function                         |
 | CldNetV2_inference_optimum.jsonc | Cloud property inference configuration                    |
 
-## Inference 🚀
-- Firstly, create a Python virtual environment.
+## Usage instructions
+- Step 1: Download remote sensing images from satellite Himawari-8/9
+
+Visit the [JAXA Himawari Monitor P-Tree System](https://www.eorc.jaxa.jp/ptree/index.html) (https://www.eorc.jaxa.jp/ptree/index.html), review the usage instructions or help documentation available on the site, and download the required data to your computer.
+
+- Step 2: Install Anaconda
+
+Visit the [Anaconda](https://www.anaconda.com/download/success) website (https://www.anaconda.com/download/success) to download the version suitable for your computer, and install it locally.
+
+- Step 3: Create a Python virtual environment
+
+Enter the following command in the terminal PowerShell.
 ```sh
 conda create -n CldNetV2 python=3.12
 ```
 
-- Secondly, activate the virtual environment and install related packages.
+- Step 4: Install the Python libraries required for the successful operation of the cloud retrieval system within the virtual environment CldNetV2
+
+Enter the following command in the terminal PowerShell.
 ```sh
 conda activate CldNetV2
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+
+# Pytorch for GPU+CPU
+pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
+
+# # or Pytorch for CPU
+# pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cpu
+
+
 pip install xarray, netCDF4, json5, pandas, einops
+
+
 pip install nnn-2.5.7.tar.gz
 ```
 
-- Finally, run the following command to predict cloud property in in the terminal.
+- Step 5: Run the cloud retrieval system in the configured environment CldNetV2 to obtain the cloud property files.
+
+Enter the following command in the terminal PowerShell.
 ```sh
 python CldNetV2_inference_optimum.py
 ```
+
 
 ## Other
 If you have any questions, feel free to contact me via email metdai@outlook.com .

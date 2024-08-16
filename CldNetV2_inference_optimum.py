@@ -1,6 +1,6 @@
 # %% [markdown]
 # # CldNet Version 2.0
-# 
+#
 # Optimal inference (sheme 03)
 
 # %% [markdown]
@@ -36,7 +36,7 @@ parser.add_argument(
 args, unknown = parser.parse_known_args()
 with open(args.config, "r+", encoding="utf-8") as fp:
     f_config = json5.load(fp)
-    
+
 # 创建输出文件夹
 if os.path.exists(f_config["out_dir"]):
     if f_config["is_remove"]:  # 删除输出文件夹
@@ -52,6 +52,8 @@ logger = m_logger(log_file, f_config["logging"])
 # 储存模型参数
 logger.info("Version of PyTorch: {0}".format(torch.__version__))
 device = f_config["device"]
+if device == "cuda":
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 logger.info(f"Using {device} device")
 
 # %% [markdown]
@@ -368,7 +370,14 @@ for RS_file in RS_files:
     Cld.attrs[
         "UMI"
     ] = "Using Model Identification (0 represents using the model CldNet-W, and 1 represents using the model CldNet-O.)"
+    Cld_encoding = {
+        "CLTYPE": {"zlib": True, "_FillValue": 255},
+        "CLOT": {"zlib": True, "_FillValue": -9999},
+        "CLTT": {"zlib": True, "_FillValue": -9999},
+        "CLTH": {"zlib": True, "_FillValue": -9999},
+        "CLER_23": {"zlib": True, "_FillValue": -9999},
+        "UMI": {"zlib": True, "_FillValue": 255},
+    }
     Cld.to_netcdf(Cld_file, encoding=Cld_encoding)
     logger.info(f"{'-'*30}{os.path.basename(RS_file)[:20]}{'-'*30}")
 logger.info(f"Inference completed successfully......")
-
