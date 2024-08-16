@@ -50,6 +50,9 @@ pip install nnn-2.5.7.tar.gz
 
 Enter the following command in the terminal PowerShell.
 ```sh
+# # To switch to the directory of the current project PMD-CldNetV2
+# cd PMD-CldNetV2-main
+
 conda activate CldNetV2
 
 python CldNetV2_inference_optimum.py
