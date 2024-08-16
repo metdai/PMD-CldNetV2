@@ -2,13 +2,14 @@
 Retrieval of all-day cloud property based on satellite remote sensing data
 
 ## File description
-| Filename/Dirname                 | Description                                               |
-| :------------------------------- | :-------------------------------------------------------- |
-| models                           | The specific parameters of the network structure CldNetV2 |
-| inputs                           | Remote sensing files required for model input             |
-| outputs                          | Cloud property files predicted by CldNetV2                |
-| CldNetV2_inference_optimum.py    | Cloud property inference function                         |
-| CldNetV2_inference_optimum.jsonc | Cloud property inference configuration                    |
+| Filename/Dirname                     | Description                                               |
+| :----------------------------------- | :-------------------------------------------------------- |
+| models                               | The specific parameters of the network structure CldNetV2 |
+| inputs                               | Remote sensing files required for model input             |
+| outputs                              | Cloud property files predicted by CldNetV2                |
+| CldNetV2_inference_optimum.py        | Cloud property inference function                         |
+| CldNetV2_inference_optimum.jsonc     | Cloud property inference configuration                    |
+| Tutorial video (20240816_214812).mp4 | Tutorial video for cloud property retrieval               |
 
 ## Usage instructions
 - Step 1: Download remote sensing images from satellite Himawari-8/9
