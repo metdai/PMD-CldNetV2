@@ -50,6 +50,8 @@ pip install nnn-2.5.7.tar.gz
 
 Enter the following command in the terminal PowerShell.
 ```sh
+conda activate CldNetV2
+
 python CldNetV2_inference_optimum.py
 ```
 
