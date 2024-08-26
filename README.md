@@ -6,7 +6,7 @@ Retrieval of all-day cloud property based on satellite remote sensing data
     <source src="Tutorial video (20240816_214812).mp4" type="video/mp4">
 </video> -->
 [![CldNetV2 Tutorial](/Tutorial%20video%20cover.png)](https://youtu.be/64-1bdD89Ak)
-s
+
 ## File description
 | Filename/Dirname                     | Description                                               |
 | :----------------------------------- | :-------------------------------------------------------- |
