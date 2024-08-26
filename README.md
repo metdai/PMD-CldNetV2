@@ -2,10 +2,9 @@
 Retrieval of all-day cloud property based on satellite remote sensing data
 
 ## Tutorial video
-
-<video width="600" height="360" controls>
+<!-- <video width="600" height="360" controls>
     <source src="Tutorial video (20240816_214812).mp4" type="video/mp4">
-</video>
+</video> -->
 
 
 ## File description
