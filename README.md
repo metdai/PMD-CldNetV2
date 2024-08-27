@@ -5,7 +5,14 @@ Retrieval of all-day cloud property based on satellite remote sensing data
 <!-- <video width="600" height="360" controls>
     <source src="Tutorial video (20240816_214812).mp4" type="video/mp4">
 </video> -->
+**YouTube**
+
 [![CldNetV2 Tutorial](/Tutorial%20video%20cover.png)](https://youtu.be/64-1bdD89Ak)
+
+**哔哩哔哩**
+
+[![CldNetV2 Tutorial](/Tutorial%20video%20cover.png)](https://www.bilibili.com/video/BV1QwspeTEDE)
+
 
 ## File description
 | Filename/Dirname                     | Description                                               |
